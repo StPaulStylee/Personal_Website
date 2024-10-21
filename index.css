@@ -1,0 +1,533 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* --------------------------- Utility Classes & Variables & Globals ----------------------------------- */
+body {
+  background-color: #000000;
+  cursor: default;
+}
+
+:root {
+  --white: #f9f7fc;
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.nes-container.is-dark {
+  background-color: #000000;
+  border-color: var(--white);
+}
+
+.main-section.nes-container {
+  margin-bottom: 2em;
+}
+
+h3.section-header,
+.section-container {
+  margin-bottom: 1.5rem;
+}
+
+section .section-container {
+  display: flex;
+}
+
+.personal-link {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.portfolio-section .personal-link:hover {
+  color: #0056b3;
+}
+
+/* ------------------------------ Header --------------------------------------  */
+
+.header-main {
+  background-color: #000000;
+  height: 25vh;
+}
+
+.banner {
+  align-items: center;
+  display: flex;
+  height: 20%;
+  justify-content: center;
+}
+
+.author-name {
+  color: #72a0e0;
+}
+
+.blue-grid {
+  background: linear-gradient(
+      to right,
+      transparent 3px,
+      #413feb 5px,
+      transparent 6.5px
+    ),
+    linear-gradient(to bottom, transparent 3px, #413feb 5px, transparent 6.5px);
+  background-size: 10px 10px;
+  border: 1px solid #413feb;
+  height: 80%;
+  position: relative;
+  width: 100%;
+}
+
+div.primary-header-text-container {
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+}
+
+.primary-header-text-container h1 {
+  display: inline-block;
+  font-size: 68px;
+  background: linear-gradient(to bottom, #ca8b25 47%, #8b2f00 68%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+nav.header-nav {
+  padding: 1em 0 1em;
+}
+
+nav .header-nav-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.nav-item-container {
+  align-items: center;
+  display: flex;
+}
+
+div.nav-item-container.nav-home {
+  margin-left: 1rem;
+}
+
+div.nav-item-container.nav-portfolio {
+  margin-right: 1rem;
+}
+
+div.nav-item-container img {
+  visibility: hidden;
+}
+
+div.nav-item-container:hover img,
+div.nav-item-container:target img,
+div.nav-item-container:active img {
+  visibility: visible;
+}
+
+div.nav-item-container img.glove {
+  height: auto;
+  min-width: 35px;
+  width: 100%;
+}
+
+nav .nav-item {
+  align-items: center;
+  color: var(--white);
+  display: flex;
+}
+
+nav .nav-item-text {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+/*  ---------------------------- About ---------------------------------------- */
+
+section.about-section {
+  display: flex;
+}
+
+section.about-section div {
+  width: 100%;
+}
+
+section.about-section .my-pic {
+  background-image: url(./images//me.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 4;
+  margin-right: 2rem;
+}
+
+/* --------------------------------- Experience --------------------------------- */
+
+.firm-name-container {
+  width: 30%;
+  padding-right: 1rem;
+}
+
+.firm-name-container .firm-name,
+.firm-name-container .firm-role {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.experience-description {
+  flex-shrink: 3;
+  width: 70%;
+}
+
+/* ------------------------------- Education ----------------------------------- */
+.education-name-container .education-name,
+.education-name-container .education-role {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.education-name-container {
+  padding-right: 2rem;
+}
+
+/* ------------------------------ Portfolio ----------------------------------- */
+
+section .portfolio-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.portfolio-section .portfolio-title {
+  margin-bottom: 1rem;
+}
+
+.portfolio-section .portfolio-link {
+  text-decoration: underline;
+}
+
+.portfolio-list-item {
+  list-style: square;
+}
+
+.my-badge {
+  display: block;
+  height: auto;
+  max-height: 145px;
+}
+
+/* ---------------------------- Learning -------------------------------- */
+section.learning-section.main-section.nes-container {
+  margin-bottom: 0rem;
+}
+
+.learning-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.learning-disclaimer {
+  font-size: 12px;
+  margin: 20px 0 0 0;
+}
+
+/* ---------------------------- Footer -------------------------------- */
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.footer-icon {
+  margin: 0 1rem;
+}
+
+.thanks-nes-css {
+  align-self: center;
+  color: var(--white);
+  font-size: 12px;
+}
+
+/* ----------------------------- Media Queries ------------------------------- */
+
+@media screen and (max-width: 1359px) {
+  .primary-header-text-container h1 {
+    font-size: 58px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section.about-section .my-pic {
+    flex-shrink: 1;
+  }
+}
+
+@media screen and (max-width: 1159px) {
+  .primary-header-text-container h1 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  html {
+    font-size: 13px;
+  }
+
+  .primary-header-text-container h1 {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  .header-main {
+    height: 21vh;
+  }
+
+  .primary-header-text-container h1 {
+    font-size: 28px;
+  }
+
+  nav .header-nav-container,
+  section.about-section,
+  .portfolio-container {
+    flex-direction: column;
+  }
+
+  div.nav-item-container.nav-home {
+    margin-left: unset;
+  }
+
+  div.nav-item-container.nav-portfolio {
+    margin-right: unset;
+  }
+
+  section.about-section .my-pic {
+    background-position: center;
+    height: 200px;
+    margin: 0 0 2rem 0;
+  }
+
+  .portfolio-header {
+    text-align: center;
+  }
+
+  .portfolio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-title {
+    align-self: center;
+  }
+
+  .portfolio-list {
+    align-self: center;
+  }
+
+  .my-badge {
+    margin-top: 2rem;
+  }
+
+  .my-badge-link {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h3.experience-header.section-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .experience-section .section-container {
+    flex-direction: column;
+  }
+
+  .firm-name-container {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  h3.education-header.section-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .education-section .section-container {
+    flex-direction: column;
+  }
+
+  .education-name-container {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .primary-header-text-container h1 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .thanks-nes-css {
+    margin-bottom: 2rem;
+  }
+
+  .footer-icon-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 373px) {
+  .primary-header-text-container h1 {
+    font-size: 16px;
+  }
+}

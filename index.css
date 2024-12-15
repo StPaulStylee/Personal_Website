@@ -331,7 +331,12 @@ section.about-section .my-pic {
 
 section .portfolio-container {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.portfolio-section .portfolio-item {
+  flex-basis: calc(100% / 3 - 35px);
 }
 
 .portfolio-section .portfolio-title {
@@ -343,7 +348,9 @@ section .portfolio-container {
 }
 
 .portfolio-list-item {
+  line-height: 24px;
   list-style: square;
+  margin-bottom: 12px;
 }
 
 .my-badge {
@@ -383,6 +390,7 @@ section.learning-section.main-section.nes-container {
   align-self: center;
   color: var(--white);
   font-size: 12px;
+  line-height: 16px;
 }
 
 /* ----------------------------- Media Queries ------------------------------- */
@@ -426,8 +434,9 @@ section.learning-section.main-section.nes-container {
 
   nav .header-nav-container,
   section.about-section,
-  .portfolio-container {
+  section .portfolio-container {
     flex-direction: column;
+    gap: 0;
   }
 
   div.nav-item-container.nav-home {
@@ -445,7 +454,7 @@ section.learning-section.main-section.nes-container {
   }
 
   .portfolio-header {
-    text-align: center;
+    /* text-align: center; */
   }
 
   .portfolio-item {
@@ -456,11 +465,11 @@ section.learning-section.main-section.nes-container {
   }
 
   .portfolio-title {
-    align-self: center;
+    /* align-self: center; */
   }
 
   .portfolio-list {
-    align-self: center;
+    /* align-self: center; */
   }
 
   .my-badge {
@@ -473,35 +482,54 @@ section.learning-section.main-section.nes-container {
 }
 
 @media screen and (max-width: 700px) {
-  h3.experience-header.section-header {
+  h3.experience-header.section-header,
+  h3.education-header.section-header {
     margin-bottom: 2.5rem;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .experience-section .section-container {
     flex-direction: column;
   }
 
-  .firm-name-container {
-    align-self: center;
-    margin-bottom: 1rem;
+  .experience-description {
+    width: 100%;
   }
-}
 
-@media screen and (max-width: 599px) {
-  h3.education-header.section-header {
+  .firm-name-container,
+  .education-name-container {
+    /* align-self: center; */
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .firm-name-container-decoration,
+  .education-name-container-decoration {
+    border-bottom: 2px solid white;
+    width: fit-content;
+  }
+
+  .firm-name::after,
+  .education-name::after {
+    content: " / ";
+  }
+
+  /* h3.education-header.section-header {
     margin-bottom: 2.5rem;
     text-align: center;
-  }
+  } */
 
   .education-section .section-container {
     flex-direction: column;
   }
 
-  .education-name-container {
+  /* .education-name-container {
     text-align: center;
     margin-bottom: 1rem;
-  }
+  } */
+}
+
+@media screen and (max-width: 599px) {
 }
 
 @media screen and (max-width: 569px) {

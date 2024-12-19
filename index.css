@@ -394,6 +394,11 @@ section.learning-section.main-section.nes-container {
 }
 
 /* ----------------------------- Media Queries ------------------------------- */
+@media screen and (min-width: 1605px) {
+  .firm-name-container .firm-name {
+    display: block;
+  }
+}
 
 @media screen and (max-width: 1359px) {
   .primary-header-text-container h1 {
